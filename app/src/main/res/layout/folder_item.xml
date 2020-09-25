@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+   
+   <ImageView 
+	   	android:layout_height="wrap_content" 
+	   	android:layout_width="wrap_content"
+       android:src="@drawable/folder">
+   </ImageView>
+  
+  
+   <TextView 
+   		android:id="@+id/textFolderName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+	    
+    <TextView android:id="@+id/textFolderPath"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"	        
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+    
+</LinearLayout>

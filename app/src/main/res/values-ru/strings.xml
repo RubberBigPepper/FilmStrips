@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Фильмоскоп</string>
+
+	<string-array name="CacheSize">
+		<item>10 MB</item>
+		<item>25 MB</item>
+		<item>50 MB</item>
+		<item>100 MB</item>
+		<item>250 MB</item>
+		<item>500 MB</item>
+		<item>Неограничено</item>
+	</string-array>
+	
+	<string-array name="SwypeFrames">
+		<item>снизу-вверх</item>
+		<item>сверху-вниз</item>
+		<item>справа-налево</item>
+		<item>слева-направо</item>
+	</string-array>
+	
+    <string name="CacheFolder">Папка для кэша:</string>
+    <string name="CacheSize">Максимальный размер кэша:</string>
+    <string name="LabelDonate">Реклама (поддержка разработчиков)</string>
+	<string name="ScanRestore">Сканирование и реставрация: diafilmy.su</string>
+	
+	<string name="MenuSettings">Настройки</string>
+	<string name="MenuExit">Выход</string>
+	<string name="MenuStart">В начало</string>
+	<string name="MenuNext">Следующий кадр</string>
+	<string name="MenuPrev">Предыдущий кадр</string>
+	<string name="SelectedFolder">Путь:</string>
+	<string name="CreateFolder">Создать папку</string>
+	<string name="Apply">Принять</string>
+	<string name="Cancel">Отмена</string>
+	<string name="SwypeFrames">Жест для смены кадра:</string>
+	<string name="AddToFavorites">Добавить в избранное</string>
+	<string name="DelFromFavorites">Убрать из избранного</string>
+	
+	<string name="Follow">Диафильмы в социальных сетях:</string>
+	<string name="SwypeKeys">Использовать для пролистывания:</string>
+	<string name="SwypeVolume">клавиши громкости</string>
+	<string name="SwypeCursor">клавиши курсора</string>
+	<string name="SwypePgUpDn">клавиши page up/page down</string>
+	
+	<string name="StretchFS">Растягивать кадры на весь экран без сохранения пропорций</string>
+	<string name="SortTitle">Сортировка по названию</string>
+	<string name="SortYear">Сортировка по году выпуска</string>
+	<string name="SortStudio">Сортировка по студии</string>
+	<string name="Year">"Год выпуска: "</string>
+	<string name="Studio">"Студия: "</string>
+	
+	<string name="UseBlackBackground">"Использовать черный фон"</string>
+	<string name="SortAddingDate">Сортировка по дате добавления</string>
+	<string name="AddingDate">"Добавлен: "</string>
+	<string name="AutoListing">Следущий кадр по окончании озвучивания</string>
+    <string name="Today">сегодня</string>
+    <string name="Yesterday">вчера</string>
+</resources>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+	<LinearLayout
+		android:id="@+id/LinearLayoutButtons"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:orientation="vertical"
+		android:layout_alignParentBottom="true"
+		>
+
+		<Button
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/ButtonDonation"
+			android:text="@string/LabelDonate">
+		</Button>
+
+	</LinearLayout>
+
+	<ScrollView 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:layout_above="@+id/LinearLayoutButtons" 
+    	android:layout_alignParentTop="true">
+	
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:orientation="vertical">
+			
+			<LinearLayout
+				android:id="@+id/LinearLayoutFolder" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:orientation="vertical" 
+				android:layout_marginTop="5sp">
+				
+				<TextView 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" 
+					android:layout_centerVertical="true"
+					android:textAppearance="?android:attr/textAppearanceLarge"
+					android:text="@string/CacheFolder"> 
+				</TextView>
+		
+				<TextView 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content" 
+					android:layout_centerVertical="true" 
+					android:id="@+id/TextViewFolder"
+					android:textAppearance="?android:attr/textAppearanceSmall" 
+					android:text=""> 
+				</TextView>
+		
+			</LinearLayout>
+			
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				
+				<TextView 
+					android:layout_width="150dp" 
+					android:id="@+id/TextViewCacheSize"
+					android:text="@string/CacheSize" 
+					android:gravity="center_vertical"
+					android:layout_centerVertical="true" 
+					android:layout_height="wrap_content">
+				</TextView>
+	
+				<Spinner 
+					android:id="@+id/SpinnerCacheSize" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:layout_alignParentRight="true" 
+					android:layout_toRightOf="@+id/TextViewCacheSize"
+					android:entries="@array/CacheSize">
+				</Spinner>
+	
+			</RelativeLayout>
+			
+		    <RelativeLayout 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				
+				<TextView 
+					android:layout_width="150dp" 
+					android:text="@string/SwypeFrames" 
+					android:id="@+id/TextViewSwype"
+					android:gravity="center_vertical"
+					android:layout_centerVertical="true" 
+					android:layout_height="wrap_content">
+				</TextView>
+	
+				<Spinner 
+					android:id="@+id/SpinnerSwypeFrames" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:layout_alignParentRight="true" 
+					android:layout_toRightOf="@+id/TextViewSwype" 
+					android:entries="@array/SwypeFrames">
+				</Spinner>
+	
+			</RelativeLayout>
+			
+		    <CheckBox
+		        android:id="@+id/checkBoxFullScreen" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/StretchFS"/>
+		    
+		    <CheckBox
+		        android:id="@+id/checkBoxBlackBackground" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/UseBlackBackground"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxAutoListing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/AutoListing"/>
+		    
+		    <TextView 
+				android:layout_width="fill_parent" 
+				android:text="@string/SwypeKeys" 
+				android:gravity="center"
+				android:layout_margin="10dp"
+				android:layout_height="wrap_content">
+			</TextView>
+			
+		    <CheckBox
+		        android:layout_marginLeft="20sp" 
+		        android:id="@+id/checkBoxVolume" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/SwypeVolume"/>
+			
+		    <CheckBox
+		        android:layout_marginLeft="20sp" 
+		        android:id="@+id/checkBoxCursor" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/SwypeCursor"/>
+			
+		    <CheckBox
+		        android:layout_marginLeft="20sp" 
+		        android:id="@+id/checkBoxPageUpDn" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:text="@string/SwypePgUpDn"/>
+
+			<TextView
+				android:layout_width="fill_parent" 
+				android:text="@string/Follow" 
+				android:gravity="center"
+				android:layout_margin="10dp"
+				android:layout_height="wrap_content">
+			</TextView>
+			
+		    <LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				
+		        <LinearLayout 
+		            android:layout_weight="1"
+			        android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"/>
+			        
+		        <ImageButton 
+		            android:id="@+id/imageButtonFacebook" 
+					android:layout_width="80dp"					
+					android:layout_height="80dp"
+					android:background="#00000000"
+					android:src="@drawable/facebook"
+					android:scaleType="fitXY"
+		            />
+		        
+		        <LinearLayout 
+		            android:layout_weight="1"
+			        android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"/>
+		        
+		        <ImageButton 
+		            android:id="@+id/imageButtonTwitter" 
+					android:layout_width="80dp"					
+					android:layout_height="80dp"
+					android:background="#00000000"
+					android:src="@drawable/twitter"
+					android:scaleType="fitXY"
+		            />
+		        
+		        <LinearLayout 
+		            android:layout_weight="1"
+			        android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"/>
+		        
+		        <ImageButton 
+		            android:id="@+id/imageButtonVkontakte" 
+					android:layout_width="80dp"					
+					android:layout_height="80dp"
+					android:background="#00000000"
+					android:src="@drawable/vkontakte"
+					android:scaleType="fitXY"
+		            />
+		        
+		        <LinearLayout 
+		            android:layout_weight="1"
+			        android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"/>
+		        
+		        <ImageButton 
+		            android:id="@+id/imageButtonInstagram" 
+					android:layout_width="80dp"					
+					android:layout_height="80dp"
+					android:background="#00000000"
+					android:src="@drawable/instagram"
+					android:scaleType="fitXY"
+		            />
+		        
+		        
+		    </LinearLayout>
+
+			<TextView
+                android:layout_marginTop="20dp"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:text="@string/ScanRestore"
+				android:gravity="center_horizontal"
+				android:id="@+id/textViewLink"
+				/>
+			
+		</LinearLayout>
+			
+	</ScrollView>	
+
+</RelativeLayout>

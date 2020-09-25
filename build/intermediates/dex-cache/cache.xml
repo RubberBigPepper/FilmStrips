@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\Projects\!Android!\filmstrips.as\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\Projects\!Android!\filmstrips.as\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_03e393ba3ba7e1944a5c6f279d1d15b38ef4bdf1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Projects\!Android!\filmstrips.as\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="dbb19bb36931122778bd27d69cfcdfd9b50b57d8">
+        <dex dex="D:\Projects\!Android!\filmstrips.as\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_712826689ec6b28b71d7286843929f31534c9439\classes.dex" />
+    </item>
+
+</items>

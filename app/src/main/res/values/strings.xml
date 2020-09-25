@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Filmscope</string>
+
+    <string-array name="CacheSize">
+		<item>10 MB</item>
+		<item>25 MB</item>
+		<item>50 MB</item>
+		<item>100 MB</item>
+		<item>250 MB</item>
+		<item>500 MB</item>
+		<item>Unlimited</item>
+	</string-array>
+	
+    <string-array name="SwypeFrames">
+		<item>from down to up</item>
+		<item>from up to down</item>
+		<item>from right to left</item>
+		<item>from left to right</item>
+	</string-array>
+	
+    <string name="CacheFolder">Folder for cache:</string>
+    <string name="CacheSize">Cache size:</string>
+    <string name="LabelDonate">Ad video (just donation)</string>
+	<string name="ScanRestore">www.diafilmy.su</string>
+	
+	<string name="MenuSettings">Settings</string>	
+	<string name="MenuExit">Exit</string>
+	<string name="MenuStart">To start frame</string>
+	<string name="MenuNext">Next frame</string>
+	<string name="MenuPrev">Previous frame</string>
+	<string name="SelectedFolder">Path:</string>
+	<string name="CreateFolder">Create new</string>
+	<string name="Apply">Apply</string>
+	<string name="Cancel">Cancel</string>
+	<string name="SwypeFrames">Swype to next frame:</string>
+	<string name="AddToFavorites">Add to favorites</string>
+	<string name="DelFromFavorites">Remove from favorites</string>
+	<string name="Follow">Follow us</string>
+	<string name="SwypeKeys">Swype keys:</string>
+	<string name="SwypeVolume">volume</string>
+	<string name="SwypeCursor">cursor</string>
+	<string name="SwypePgUpDn">page up/page down</string>
+	
+	<string name="StretchFS">Stretch images to fullscreen, aspect ration will not keep</string>
+	<string name="SortTitle">Sort by title</string>
+	<string name="SortYear">Sort by year</string>
+	<string name="SortStudio">Sort by studio</string>
+	<string name="Year">"Production year: "</string>
+	<string name="Studio">"Studio: "</string>
+	
+	<string name="UseBlackBackground">"Black background"</string>
+	<string name="SortAddingDate">Sort by adding date</string>
+	<string name="AddingDate">"Adding date: "</string>
+	<string name="AutoListing">Move to next frame after audio end</string>
+    <string name="Today">today</string>
+    <string name="Yesterday">yesterday</string>
+</resources>
