@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.yandex.android:mobileads:2.80@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e50d4acea466b45b20beac80fd93af8a/mobileads-2.80/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e50d4acea466b45b20beac80fd93af8a/mobileads-2.80/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e50d4acea466b45b20beac80fd93af8a/mobileads-2.80/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e5b1afbd474e58adbd8801647b28240/jetified-mobileads-2.80/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e5b1afbd474e58adbd8801647b28240/jetified-mobileads-2.80/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e5b1afbd474e58adbd8801647b28240/jetified-mobileads-2.80/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yandex.android/mobileads/2.80/a84139e37144d6c277d61ccb9d2725824228266b/mobileads-2.80-javadoc.jar!/" />

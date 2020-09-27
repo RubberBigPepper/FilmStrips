@@ -115,6 +115,7 @@ public class SettingsActivity extends Activity implements OnClickListener, OnChe
         findViewById(R.id.imageButtonTwitter).setOnClickListener(this);
         findViewById(R.id.imageButtonVkontakte).setOnClickListener(this);
         findViewById(R.id.imageButtonInstagram).setOnClickListener(this);
+        findViewById(R.id.btnClearCache).setOnClickListener(this);
 //        findViewById(R.id.buttonScanRestore).setOnClickListener(this);
 		TextView textView = (TextView) findViewById(R.id.textViewLink);
 		Linkify.addLinks(textView, Linkify.WEB_URLS);
@@ -200,10 +201,13 @@ public class SettingsActivity extends Activity implements OnClickListener, OnChe
 			ShowBrowser("https://twitter.com/diafilmy");  
 			break;
 		case R.id.imageButtonVkontakte:
-			ShowBrowser("http://vk.com/diafilm1");  
+			ShowBrowser("https://vk.com/diafilm1");
 			break;
 		case R.id.imageButtonInstagram:
 			ShowBrowser("https://www.instagram.com/diafilmy.su");  
+			break;
+		case R.id.btnClearCache:
+			CacheManager.clearCache();
 			break;
 		}
 	}

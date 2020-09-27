@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.akmanaev.filmstrip"
-    android:versionCode="4"
-    android:versionName="1.3"
     android:installLocation="auto">
 
 
@@ -40,18 +38,6 @@
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
             android:name=".SettingsActivity">            
         </activity>
-        
-        <activity android:name="com.vungle.publisher.VideoFullScreenAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-
-        <activity android:name="com.vungle.publisher.MraidFullScreenAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
-
-        <activity android:name="com.vungle.publisher.FlexViewAdActivity"
-        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
 
     </application>
 

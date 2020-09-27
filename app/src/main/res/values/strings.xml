@@ -56,4 +56,5 @@
 	<string name="AutoListing">Move to next frame after audio end</string>
     <string name="Today">today</string>
     <string name="Yesterday">yesterday</string>
+	<string name="ClearCache">Clear cache</string>
 </resources>

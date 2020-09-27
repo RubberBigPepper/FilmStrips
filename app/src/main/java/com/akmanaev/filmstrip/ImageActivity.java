@@ -600,7 +600,7 @@ public class ImageActivity extends Activity implements OnTouchListener, ImageSwi
 		public void run()
 		{
 			//String strURL="http://www.diafilmy.su/dia.php?id="+m_strID;
-			String strURL="http://www.diafilmy.su/dia-android.php?id="+m_strID;
+			String strURL="https://www.diafilmy.su/dia-android.php?id="+m_strID;
 			Log.e("Filmscope","Reading "+strURL);
 			//MyXMLElement cRoot=MyXMLElement.ReadFromHTTP(strURL);
 			String strFile=CacheManager.CopyToCache(strURL,false);

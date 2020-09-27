@@ -70,14 +70,14 @@ public class CacheManager
         }
         catch(Exception ex)
         {
-            //ex.printStackTrace();
+            ex.printStackTrace();
         }
     }
 
     private static String MakeFileName(String strURL)
     {
         String strFile=strURL.toLowerCase();
-        strFile=strFile.replace("/","_").replace("http:__", m_strFolder);
+        strFile=strFile.replace("/","_").replace("https:__", m_strFolder);
         strFile=strFile.replace("?","_");
         strFile=strFile.replace("&","_");
         strFile=strFile.replace("=","_");
@@ -296,5 +296,17 @@ public class CacheManager
     public static float getFilmLoads(int nID)//сколько фильма закачано (от 0 до 1) в кэш
     {
         return 0.0f;
+    }
+
+    public static void clearCache(){//очистка всего кеша
+        try {
+            String strFolder = m_strFolder;
+            File cDir = new File(strFolder);
+            File[] cArFiles = cDir.listFiles();
+            for (File file : cArFiles) {
+                file.delete();
+            }
+        }
+        catch (Exception ex){ ex.printStackTrace();}
     }
 }

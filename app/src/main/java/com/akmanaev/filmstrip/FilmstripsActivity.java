@@ -12,8 +12,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.TextWatcher;
@@ -45,6 +43,9 @@ import android.widget.Toast;
 /*import com.vungle.publisher.VungleAdEventListener;
 import com.vungle.publisher.VungleInitListener;
 import com.vungle.publisher.VunglePub;*/
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.yandex.mobile.ads.AdRequest;
 import com.yandex.mobile.ads.AdRequestError;
 import com.yandex.mobile.ads.InterstitialAd;
@@ -194,9 +195,9 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
         catch(Exception ex){}
         m_strArIDFavorites.clear();
         if(strArSet!=null)
-        {
-            for(int n=0;n<strArSet.length;n++)
-                m_strArIDFavorites.add(strArSet[n]);
+		{
+			for(String val : strArSet)
+                m_strArIDFavorites.add(val);
         }
         Log.e(TAG,m_strArIDFavorites.toString());
         CacheManager.setFolder(cPrefs.getString("Folder", CacheManager.getFolder()));
@@ -444,7 +445,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 			    			}
 			    		}
 			    		cPrefs.putString("Favorites", cBuilder.toString());
-			    		cPrefs.commit();
+			    		cPrefs.apply();
 			    		UpdateFavoritesList();
 						return false;
 					}
@@ -811,7 +812,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 		private void MakeFilmStripsCollect()
 	    {
 			//String strXMLAddress="http://diafilmy.su/dia-listgz.php";
-			String strXMLAddress="http://diafilmy.su/dia-list-androidgz.php";
+			String strXMLAddress="https://diafilmy.su/dia-list-androidgz.php";
 			/*try
 			{
 				String strPName=getPackageName();
@@ -884,7 +885,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 	    				cTime.parse(strDate);
 	    				cStrip.m_lNewsDate=cTime.toMillis(false);
 	    				int nDayAddingSpend=2;//сколько дней прошло после добавления, 0 - сегодня, 1 - вчера
-	    			    if((lMillisToday-cStrip.m_lNewsDate)<2*86400000l)//с даты добавления прошло не более 2 суток
+	    			    if((lMillisToday-cStrip.m_lNewsDate)<2*86400000L)//с даты добавления прошло не более 2 суток
                         {
                             if(cTime.month==cTodayTime.month)//все просто, дата в том же месяце
                                 nDayAddingSpend=cTodayTime.monthDay-cTime.monthDay;
@@ -1079,6 +1080,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 				}
 				catch(Exception ex)
 				{
+					ex.printStackTrace();
 				}
 			}			
 			return cResView;
@@ -1117,7 +1119,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 					{
 						Thread.sleep(500);
 					}
-					catch(Exception ex){}
+					catch(Exception ex){ ex.printStackTrace(); }
 					while(m_strArFilms.size()>0&&!m_bStop)
 					{
 						OneFilmStrip cStrip=m_strArFilms.get(0);
@@ -1192,10 +1194,15 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 		{
 			for(int n=0;n<m_cArGroups.size();n++)
 			{
-				Map<String, Object> map = (Map<String, Object>)m_cArGroups.get(n);
-				int nCount=m_cArChilds.get(n).size();
-				String strText=String.format("%s (%d)", m_strArCat.get(n), nCount);
-				map.put("cat", strText);
+				try {
+					Map<String, Object> map = (Map<String, Object>) m_cArGroups.get(n);
+					int nCount = m_cArChilds.get(n).size();
+					String strText = String.format("%s (%d)", m_strArCat.get(n), nCount);
+					map.put("cat", strText);
+				}
+				catch (Exception ex){
+					ex.printStackTrace();
+				}
 			}        
 			
 			MyExpandableAdapter cAdapter=(MyExpandableAdapter)m_cListView.getExpandableListAdapter();
@@ -1246,7 +1253,7 @@ public class FilmstripsActivity extends Activity implements OnChildClickListener
 						}
 						Map<String,?>cMap=cArGroupList.get(n);
 						String strTitle=cMap.get("Title").toString().toLowerCase();
-						if(strTitle.indexOf(m_strSearch)!=-1)
+						if(strTitle.contains(m_strSearch))
 						{
 							Log.e(TAG,strTitle);
 							cArGroupChild.add(cMap);

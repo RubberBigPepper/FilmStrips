@@ -57,4 +57,5 @@
 	<string name="AutoListing">Следущий кадр по окончании озвучивания</string>
     <string name="Today">сегодня</string>
     <string name="Yesterday">вчера</string>
+	<string name="ClearCache">Очистить кэш</string>
 </resources>
